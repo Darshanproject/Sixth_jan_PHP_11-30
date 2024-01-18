@@ -1,0 +1,22 @@
+syntax:
+create database database_name
+CREATE DATABASE sixthjanphp;
+
+
+syntax:
+database_name use;
+create table table_name(
+Column_name datatype size
+);
+
+USE sixthjanphp;
+CREATE TABLE  students(
+	id int(255) ,
+	name varchar(30),
+    surname varchar(20),
+    email varchar(20)
+);
+
+create table table_name(
+Column_name datatype size
+);
