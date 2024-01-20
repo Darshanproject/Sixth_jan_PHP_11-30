@@ -1,0 +1,33 @@
+alert table table_name add cloumn_name datatype size
+ALTER TABLE students ADD  password varchar(16);
+ALTER TABLE students ADD  MobileNumber int(10);
+
+
+insert into table_name (column_name) values (data);
+INSERT INTO students (name,surname,email,password,MobileNumber) 
+VALUES ('Mayur','Patel','mayur@gmail.com','123456',1234567891);
+
+
+INSERT INTO students VALUES (1,'mihir','barad','mihir@gamil.com',
+'124578',7894561230);
+
+ALTER TABLE students MODIFY id int PRIMARY key AUTO_INCREMENT NOT null;
+
+INSERT INTO students (name,surname,email,password,MobileNumber) 
+VALUES ('Harsh','Patel','harsh@gmail.com','12345',1234568891);
+
+update table table_name set cahnges where  column_name data
+UPDATE students SET id = 2 WHERE name = 'Mihir'
+
+INSERT INTO students (name,surname,email,password,MobileNumber) 
+VALUES ('Akshil','Shah','akshil@gmail.com','Akshl',1234567898),
+('karan','shah','karan@gamil.com','456789',852397416);
+
+Delete table table_name column_name data
+
+DELETE from students WHERE name = 'mihir';
+
+Drop table table_name;
+
+DROP TABLE students1
+TRUNCATE TABLE students2;
