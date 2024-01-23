@@ -1,0 +1,38 @@
+INSERT INTO salary (name,surname,salary) VALUES ('Akshil','Shah',45000),
+('Haridarshan','Patel',25000),('Karan','Chandria',15000),
+('Aum','Chandani',10000),('Akshil','Shah',12000);
+
+UPDATE  salary SET salary = 55000 WHERE name = 'Akshil' AND salary = 45000;
+
+UPDATE salary SET salary = 6000 WHERE  name = 'Akshil' OR salary < 15000;
+
+SELECT * FROM `salary` WHERE name = 'Haridarshan';
+
+
+table 1 
+movies 
+Column name  = movie name,hero name , year ,song;
+table 2 
+hero = movie name ,hero name;
+table 3
+songs = movie name ,songs name;
+table 4 
+year = songs , year ,hero ,movie name;
+karan = 3
+akshil = 1,
+aum = 4,
+haridarshan = 2,
+akshil = 5
+
+Syntax For Forigne Key
+Create tabel tabel_name(
+	Column_name datatype auto_increment pk
+	column_name datatype not null
+	F_key datatype not null;
+	Forgine Key (F_key) References Parent table(Primary Key );
+
+);
+
+
+
+INSERT INTO emopleyess (name,F_key) VALUES ('Karan',3),('aum',4),('Akshil',5),('Haridarshan',2),('Akshil',1);
