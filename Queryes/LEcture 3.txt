@@ -24,6 +24,11 @@ aum = 4,
 haridarshan = 2,
 akshil = 5
 
+CREATE TABLE b (
+	name varchar(20) PRIMARY key,
+    f_key int NOT null,
+    FOREIGN KEY (f_key) REFERENCES salary (id)
+);
 Syntax For Forigne Key
 Create tabel tabel_name(
 	Column_name datatype auto_increment pk

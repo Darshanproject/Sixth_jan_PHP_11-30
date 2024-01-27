@@ -1,0 +1,11 @@
+SELECT SUM(salary) FROM `salary` 
+SELECT SUM(salary) as maxsalary FROM `salary` 
+
+SELECT MAX(salary) FROM `salary`
+SELECT name,surname,MAX(salary) as top FROM `salary`;
+SELECT MAX(salary) as top FROM `salary` WHERE 
+salary < (SELECT MAX(salary) FROM salary);
+SELECT MIN(salary) as top FROM `salary`;
+SELECT AVG(salary) FROM `salary` WHERE 1
+
+SELECT COUNT(*) FROM `salary`
