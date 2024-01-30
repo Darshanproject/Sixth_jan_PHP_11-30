@@ -1,0 +1,40 @@
+SELECT salary.salary,emopleyess.name FROM salary INNER JOIN emopleyess 
+WHERE salary.id = emopleyess.F_key;
+SELECT salary.salary,salary.surname,emopleyess.name FROM salary INNER JOIN 
+emopleyess WHERE salary.id = emopleyess.F_key;
+
+Movie table created here  in hari database
+CREATE TABLE movie(
+	movie_name varchar(20) PRIMARY KEY NOT NULL,
+    songs varchar(20) NOT NULL,
+    hero varchar(20) NOT Null,
+    year_ int(10) NOT NULL
+);
+
+Data inserted in movie table 
+INSERT INTO `movie` (`movie_name`, `songs`, `hero`, `year_`) VALUES 
+('Animal', 'xyz', 'Randir Kapoor', '2023'), ('Jawan', 'abc', 'SRK', '2023'), 
+('Iron Man', 'cde', 'Jr RDJ', '2008'), ('Rani or Rockey', 'PQR', 'Ranveer Shing', 
+'2023'), ('Pk', 'RST', 'Ammir Khan', '2018');
+
+
+
+
+INSERT INTO `songs` (`songsname`, `year_song`, `F_key`) VALUES ('RST', '2023-02-09', 'Pk'), ('PQR', '2023-06-14', 'Rani or Rockey'), ('cde', '2014-01-16', 'Iron Man'), ('abc', '2023-05-01', 'Jawan'), ('xyz', '2023-08-16', 'Animal');
+created hero table 
+CREATE TABLE hero(
+	hero_name varchar(20) PRIMARY KEY,
+    year_name date ,
+    F_key varchar(20) NOT NULL,
+    FOREIGN KEY (F_key) REFERENCES movie(movie_name)
+); 	
+
+
+INSERT INTO `hero` (`hero_name`, `year_name`, `F_key`) VALUES ('SRK', '2023-11-14', 'Jawan'), ('Ranbir Shing', '2023-08-15', 'Rani or Rockey'), ('Jr RDJ', '2023-01-18', 'Iron Man'), ('Ranbir kapoor', '2023-06-06', 'Animal'), ('Amir khan', '2023-02-07', 'Pk');
+
+
+ALTER TABLE movie DROP hero;
+ALTER TABLE movie DROP songs;
+
+
+SELECT movie.movie_name,movie.year_,hero.hero_name FROM movie INNER JOIN hero ON  movie.movie_name = hero.F_key
