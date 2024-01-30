@@ -37,4 +37,17 @@ ALTER TABLE movie DROP hero;
 ALTER TABLE movie DROP songs;
 
 
-SELECT movie.movie_name,movie.year_,hero.hero_name FROM movie INNER JOIN hero ON  movie.movie_name = hero.F_key
+SELECT movie.movie_name,movie.year_,hero.hero_name FROM movie INNER JOIN hero ON 
+ movie.movie_name = hero.F_key
+SELECT movie.movie_name,movie.year_,hero.hero_name FROM movie LEFT JOIN hero ON  
+movie.movie_name = hero.F_key
+SELECT movie.movie_name,movie.year_,hero.hero_name FROM movie RIGHT JOIN hero ON  
+movie.movie_name = hero.F_key
+
+We can't use full join anywhere
+SELECT movie.movie_name,movie.year_,hero.hero_name,hero.year_name FROM movie FULL JOIN 
+hero ON  movie.movie_name = hero.F_key
+
+SELECT * FROM `movie` WHERE movie_name LIKE 'a%';
+SELECT * FROM salary  ORDER BY salary;
+SELECT * FROM salary ORDER BY salary DESC;
