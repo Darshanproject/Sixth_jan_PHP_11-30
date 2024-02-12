@@ -1,0 +1,20 @@
+DELIMITER $$
+CREATE PROCEDURE getAllemployes()
+ BEGIN 
+ SELECT * FROM emopleyess1;
+ END
+
+
+DELIMITER $$
+ CREATE PROCEDURE insertemploye(name varchar(20),lname varchar(20),dept varchar(20))
+ BEGIN 
+ 	INSERT INTO emopleyess1 VALUES (name,lname,dept);
+ END
+
+
+DELIMITER $$
+ CREATE PROCEDURE insertemploye1(id int,name varchar(20),lname varchar(20),dept 
+ varchar(20))
+ BEGIN 
+ 	INSERT INTO emopleyess1 VALUES (name,lname,dept);
+ END
